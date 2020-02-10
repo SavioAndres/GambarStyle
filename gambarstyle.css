@@ -1,0 +1,42 @@
+/* Initializing */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    
+}
+
+/* Components */
+
+.btn {
+    background-color: aqua;
+    padding: 12px;
+    border: none;
+    color: black;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Grid */
+
+.container, .row, .col {
+    display: grid;
+}
+
+.container {
+
+}
+
+.row {
+    grid-template-rows: ;
+}
+
+.col {
+    grid-column: auto;
+}
