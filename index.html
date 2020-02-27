@@ -6,18 +6,26 @@
     <title>Page view</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='gambarstyle.css'>
-    <script src='gambarstyle.js'></script>
 </head>
 <body>
     <nav class="color-blue">
-        <ul class="container">
+        <ul class="navbar">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <li><a href="#">primeiro item</a></li>
+            <li><a href="#">segundo item</a></li>
+            <li><a class="remain-nav-item" href="#">terceiro item</a></li>
+            <div class="dropdown">
+                <li><button class="dropbtn">Dropdown ></button></li>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </div>
             <li><a href="#">primeiro item</a></li>
             <li><a href="#">segundo item</a></li>
             <li><a href="#">terceiro item</a></li>
-            <li><a href="#">primeiro item</a></li>
-            <li><a href="#">segundo item</a></li>
-            <li><a href="#">terceiro item</a></li>
-            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">==</a></li>
+            <li><a class="navbar-toggler">&#9776;</a></li>
         </ul>
     </nav>
     <div class="row">
@@ -133,5 +141,6 @@
     </div>
 </div>
 </div>
+<script src='gambarstyle.js'></script>
 </body>
 </html>

@@ -17,27 +17,81 @@ body {
 /* Navbar */
 
 nav {
+    position: relative;
     width: 100%;
-    height: 48px;
+    height: auto;
     background-color: darkolivegreen;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
     color: #fff;
 }
 
-nav ul {
+.navbar {
+    position: relative;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: inherit;
+    z-index: 1;
 }
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    text-decoration: none;
+  
+.navbar a {
+    float: left;
+    display: block;
     color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar .navbar-toggler {
+    display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {  
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+  
+.dropdown-content a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Components */
@@ -165,5 +219,37 @@ hr {
     }
     [class*="col"] {
         flex: 0 0 25%;
+    }
+    /* Navbar */
+    .navbar li a, .dropdown .dropbtn {
+        display: none;
+    }
+    .navbar li a.navbar-toggler {
+        float: right;
+        display: block;
+    }
+    .navbar li a.remain-nav-item {
+        display: block;
+    }
+    .navbar.nav-responsive {
+        position: relative;
+    }
+    .navbar.nav-responsive .navbar-toggler {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.nav-responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .navbar.nav-responsive .dropdown {float: none;}
+    .navbar.nav-responsive .dropdown-content {position: relative;}
+    .navbar.nav-responsive .dropdown .dropbtn {
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: left;
     }
 }

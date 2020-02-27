@@ -1,8 +1,9 @@
-function navbar_responsive() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
+// Navbar
+document.querySelector('.navbar-toggler').onclick = function() {
+    let navbar = document.querySelector('.navbar');
+    if (navbar.className === "navbar") {
+        navbar.className += " nav-responsive";
     } else {
-      x.className = "topnav";
+        navbar.className = "navbar";
     }
 }
